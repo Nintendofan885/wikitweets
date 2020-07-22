@@ -45,7 +45,7 @@ def main():
     twitter = Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
     
     gap = 1000000
-    response = urllib.request.urlopen('https://tools.wmflabs.org/wmcounter/wmcounter.data.js')
+    response = urllib.request.urlopen('https://wmcounter.toolforge.org/wmcounter.data.js')
     raw = response.readall().decode('utf-8')
     if re.search(r"(?im)var editinit = (\d+)", raw):
         current_count = int(re.findall(r"(?im)var editinit = (\d+)", raw)[0].strip())
@@ -61,27 +61,27 @@ def main():
             
             #en
             random.shuffle(hashtags)
-            status = '%s edits - Watch it live! https://tools.wmflabs.org/wmcounter/ %s' % (number, ' '.join(hashtags[:htl]))
+            status = '%s edits - Watch it live! https://wmcounter.toolforge.org/ %s' % (number, ' '.join(hashtags[:htl]))
             twitter.update_status(status=status)
             time.sleep(10)
             #es
             random.shuffle(hashtags)
-            status = '%s ediciones - ¡Míralo en directo! https://tools.wmflabs.org/wmcounter/ %s' % (number.replace(',', '.'), ' '.join(hashtags[:htl]))
+            status = '%s ediciones - ¡Míralo en directo! https://wmcounter.toolforge.org/ %s' % (number.replace(',', '.'), ' '.join(hashtags[:htl]))
             twitter.update_status(status=status)
             time.sleep(10)
             #fr
             random.shuffle(hashtags)
-            status = '%s éditions - https://tools.wmflabs.org/wmcounter/ %s' % (number.replace(',', ' '), ' '.join(hashtags[:htl]))
+            status = '%s éditions - https://wmcounter.toolforge.org/ %s' % (number.replace(',', ' '), ' '.join(hashtags[:htl]))
             twitter.update_status(status=status)
             time.sleep(10)
             #pt
             random.shuffle(hashtags)
-            status = '%s edições - https://tools.wmflabs.org/wmcounter/ %s' % (number.replace(',', '.'), ' '.join(hashtags[:htl]))
+            status = '%s edições - https://wmcounter.toolforge.org/ %s' % (number.replace(',', '.'), ' '.join(hashtags[:htl]))
             twitter.update_status(status=status)
             time.sleep(10)
             #ru
             random.shuffle(hashtags)
-            status = '%s правок - https://tools.wmflabs.org/wmcounter/ %s' % (number.replace(',', ' '), ' '.join(hashtags[:htl]))
+            status = '%s правок - https://wmcounter.toolforge.org/ %s' % (number.replace(',', ' '), ' '.join(hashtags[:htl]))
             twitter.update_status(status=status)
             time.sleep(10)
             
