@@ -2,7 +2,7 @@
 
 Twitter bots about Wikipedia, Wikimedia Commons and other wikis.
 
-See a list of wikitweets bots working here https://tools.wmflabs.org/wikitweets/
+See a list of wikitweets bots working here https://wikitweets.toolforge.org/
 
 Ideas for future bots:
 
